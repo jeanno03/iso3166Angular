@@ -1,0 +1,89 @@
+<div class="container spacer">
+    <div class="panel panel-success">
+      <div class="panel-heading">Home</div>
+      <div class="panel-body">
+        <div class="form-group">
+          <span class="spacer-right">
+            <label>pseudo:</label>
+          </span>
+          <span class="spacer-right">
+            <input type="text" [(ngModel)]="pseudo" />
+          </span>
+        </div>
+        <div class="form-group">
+            <span class="spacer-right">
+              <label>Mot de passe:</label>
+            </span>
+            <span class="spacer-right">
+              <input type="text" [(ngModel)]="mdp2" />
+            </span>
+            <span class="spacer-right">
+              <button class="btn btn-success" (click)="chercher()">valider</button>
+            </span>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/France.png" />
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+
+<div class="container spacer">
+  <div class="panel panel-success">
+    <div class="panel-heading">Créer</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <span class="spacer-right">
+          <label>pseudo:</label>
+        </span>
+        <span class="spacer-right">
+          <input type="text" [(ngModel)]="pseudo" />
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="spacer-right">
+          <label>Mot de passe:</label>
+        </span>
+        <span class="spacer-right">
+          <input type="text" [(ngModel)]="mdp" />
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="spacer-right">
+          <label>Email:</label>
+        </span>
+        <span class="spacer-right">
+          <input type="text" [(ngModel)]="email" />
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="spacer-right">
+          <label>Nom:</label>
+        </span>
+        <span class="spacer-right">
+          <input type="text" [(ngModel)]="nom" />
+        </span>
+      </div>
+      <div class="form-group">
+          <span class="spacer-right">
+            <label>Prénom:</label>
+          </span>
+          <span class="spacer-right">
+            <input type="text" [(ngModel)]="prenom" />
+          </span>
+          <span class="spacer-right">
+            <button class="btn btn-success" (click)="creer()">valider</button>
+          </span>
+        </div>
+        <div class="panel-body">
+          <img src="assets/images/France.png" />
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

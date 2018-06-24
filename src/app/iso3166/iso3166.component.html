@@ -1,0 +1,83 @@
+<div class="container spacer">
+  <div class="panel panel-success">
+    <div class="panel-heading">Liste des pays</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <span class="spacer-right">
+          <label>Pays:</label>
+        </span>
+        <span class="spacer-right">
+          <input type="text" [(ngModel)]="motCle" />
+        </span>
+        <span class="spacer-right">
+          <button class="btn btn-success" (click)="chercher()">Chercher</button>
+        </span>
+      </div>
+      <table class="table-striped" *ngIf="pageIso3166s?.content">
+        <tr>
+          <th>Pays</th>
+          <th>A2</th>
+          <th>A3</th>
+          <th>
+            <span class="spacer-right">
+              Number
+            </span>
+          </th>
+          <th>
+            <span class="spacer-right">
+              Action
+            </span>
+          </th>
+          <th>
+            <span class="spacer-right">
+              Action
+            </span>
+          </th>
+          <th>
+            <span class="spacer-right">
+              photo
+            </span>
+          </th>
+        </tr>
+        <tr *ngFor="let i of pageIso3166s?.content">
+          <td>
+            <span class="spacer-right">{{i.pays}}</span>
+          </td>
+          <td>
+            <span class="spacer-right">{{i.a2}}</span>
+          </td>
+          <td>
+            <span class="spacer-right">{{i.a3}}</span>
+          </td>
+          <td>
+            <span class="spacer-right">{{i.number}}</span>
+          </td>
+          <td>
+            <span class="spacer-right">
+              <a class="nav-green" (click)="onEditIso3166(i.pays)">Edit</a>
+            </span>
+          </td>
+          <td>
+            <span class="spacer-right">
+              <a class="nav-green" (click)="onDeleteIso3166(i)">Delete</a>
+            </span>
+          </td>
+          <td>
+            <span class="spacer-right">
+              <img class="image" src={{i.url}} />
+            </span>
+          </td>
+
+
+        </tr>
+      </table>
+      <div class="container2">
+        <ul class="nav nav-pills">
+          <li [ngClass]="{'active':i==currentPage}" *ngFor="let p of pages; let i=index">
+            <a class="clickable" (click)="goToPage(i)">{{i}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
